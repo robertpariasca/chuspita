@@ -15,12 +15,12 @@
                                             <div class="col-md-6">
                                                 <div class="main-card mb-3 card">
                                                     <div class="card-body"><h5 class="card-title">Registro de Usuario</h5>
-                                                        <form class="">
+                                                        <form class="" method="post" id="formsegmanusuario">
                                                             <div class="position-relative form-group"><label
                                                                     for="segmanusuario" class="">Usuario</label><input
                                                                     name="segmanusuario" id="segmanusuario"
                                                                     placeholder="Ingrese Usuario..." type="text"
-                                                                    class="form-control"></div>
+                                                                    class="form-control" style="text-transform: lowercase"></div>
                                                             <div class="position-relative form-group"><label
                                                                     for="segmanpassword"
                                                                     class="">Contraseña</label><input name="segmanpassword"
@@ -58,7 +58,7 @@
                                                                     <option value="000"> </option>
                                                             </select></div>
       
-                                                            <button class="mt-1 btn btn-primary" name='agregarUsuario'>Agregar</button>
+                                                            <button class="mt-1 btn btn-primary" name='agregarUsuario' id='agregarUsuario'>Agregar</button>
                                                         </form>
                                                     </div>
                                                 </div>
@@ -66,7 +66,7 @@
                     </div>
                 </div>
             </div>
-            {{> AppFooter/footer }}
+            <!--{{> AppFooter/footer }}-->
         </div>
     </div>
 {{/ base }}

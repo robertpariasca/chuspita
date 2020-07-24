@@ -1,0 +1,61 @@
+{{#> base }}
+    <div class="app-main">
+        {{> AppSidebar/menubar dash-analytics=this }}
+        <div class="app-main__outer">
+            <div class="app-main__inner">
+                {{> AppHeader/header }}
+                <div class="app-inner-layout app-inner-layout-page">
+                    
+                    <div class="app-inner-layout__wrapper">
+                        <div class="app-inner-layout__sidebar">
+                            <div class="app-layout__sidebar-inner dropdown-menu-rounded">
+                                {{> AppMain/page-menu dash-analytics=this}}
+                            </div>
+                        </div>
+                                            <div class="col-md-6">
+                                                <div class="main-card mb-3 card">
+                                                    <div class="card-body"><h5 class="card-title">Registro de Empresa</h5>
+                                                        <form class="" method="post" id="formsegmanusuario">
+                                                            <div class="position-relative form-group"><label
+                                                                    for="segmanempdes" class="">Nombre Empresa</label><input
+                                                                    name="segmanempdes" id="segmanempdes"
+                                                                    placeholder="Ingrese Nombre Empresa..." type="text"
+                                                                    class="form-control"></div>
+                                                            <div class="position-relative form-group"><label
+                                                                    for="segmanempdir" class="">Direccion</label><input
+                                                                    name="segmanempdir" id="segmanempdir"
+                                                                    placeholder="Ingrese Direccion..." type="text"
+                                                                    class="form-control"></div>
+                                                            <div class="position-relative form-group"><label
+                                                                    for="segmanemprep" class="">Representante Legal</label><input
+                                                                    name="segmanemprep" id="segmanemprep"
+                                                                    placeholder="Ingrese Representante Legal..." type="text"
+                                                                    class="form-control"></div>
+                                                            <div class="position-relative form-group"><label
+                                                                    for="segmanempdoc" class="">Tipo Documento Identidad</label><select
+                                                                    name="select" id="segmanempdoc"
+                                                                    class="form-control">
+                                                            </select></div>
+                                                            <div class="position-relative form-group"><label
+                                                                    for="segmanempnro" class="">N° Documento Identidad</label><input
+                                                                    name="segmanempnro" id="segmanempnro"
+                                                                    placeholder="Ingrese Documento..." type="text"
+                                                                    class="form-control"></div>
+                                                            <div class="position-relative form-group"><label
+                                                                    for="segmanemptel" class="">Telefono</label><input
+                                                                    name="segmanemptel" id="segmanemptel"
+                                                                    placeholder="Ingrese Telefono..." type="text"
+                                                                    class="form-control"></div>
+      
+                                                            <button class="mt-1 btn btn-primary" name='agregarUsuario' id='agregarUsuario'>Agregar</button>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                    </div>
+                </div>
+            </div>
+            <!--{{> AppFooter/footer }}-->
+        </div>
+    </div>
+{{/ base }}

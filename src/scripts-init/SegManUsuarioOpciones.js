@@ -1,26 +1,35 @@
 $(document).ready(() => {
-    $("#agregarUsuario").click(function(){
-    
+    $("#formsegmanusuario").submit(function (event){
+      event.preventDefault();
     var usuario = $("#segmanusuario").val();
     var contraseña = $("#segmanpassword").val();
     var nombre = $("#segmannombre").val();
     var apellidos = $("#segmanapellidos").val();
-    var empresa = $("#segmanempresa option:selected").val()
-    var oficina = $("#segmansede option:selected").val()
-    var cargo = $("#segmancargo option:selected").val()
-    
-        var email = $("#exampleEmail").val();
-    var password = $("#examplePassword").val();
+    var empresa = $("#segmanempresa option:selected").val();
+    var oficina = $("#segmansede option:selected").val();
+    var cargo = $("#segmancargo option:selected").val();
 
+
+
+   
     // Checking for blank fields.
     if( usuario =='' || contraseña =='' || nombre =='' || apellidos=='' || empresa=='000' || oficina=='000'|| cargo=='000'){
     alert("Por favor, completar todos los campos");
     }else {
 
-
+ 
+            var Codigo = sessionStorage.getItem("Codigo");
+            var Ip = sessionStorage.getItem("IpIngreso");
             var ItemJSON={
-                "email": email,
-                "clave": password
+                "alias": usuario,
+                "contraseña": contraseña,
+                "nombre" : nombre,
+                "apellidos" : apellidos,
+                "empresa" : empresa,
+                "oficina" : oficina,
+                "cargo" : cargo,
+                "codlog": Codigo,
+                "ip" : Ip
             };
                   
 
@@ -32,24 +41,14 @@ $(document).ready(() => {
                      //alert(this.responseText);
                      //var myArr3 =this.responseText;
                      var respuesta = JSON.parse(this.responseText);
-                     if (respuesta=='CI'){
-                      alert("Contraseña Incorrecta");
-                      document.getElementById("examplePassword").innerHTML = "";
-                      return;
-                     }
-                     if (respuesta=='IN'){
-                      alert("Usuario Inactivo");
-                      document.getElementById("exampleEmail").innerHTML = "";
-                      document.getElementById("examplePassword").innerHTML = "";
-                      return;
+
+                    if (respuesta=="DU"){
+                      alert("Usuario Duplicado");
+                      document.getElementById("segmanusuario").innerHTML = "";
+                      return false;
                     }
-                    if (respuesta=='NE'){
-                      alert("Usuario no existe");
-                      document.getElementById("exampleEmail").innerHTML = "";
-                      document.getElementById("examplePassword").innerHTML = "";
-                      return;
-                    }
-                    
+
+                    /*
                      var myArr= JSON.parse(this.responseText);
                      sessionStorage.setItem("Codigo", myArr.registro[0].codusuario);
                      sessionStorage.setItem("Nombres", myArr.registro[0].nombre);
@@ -57,45 +56,17 @@ $(document).ready(() => {
                      sessionStorage.setItem("IdEmpresa", myArr.registro[0].idempresa);
                      sessionStorage.setItem("IdCargo", myArr.registro[0].idcargo);
                      sessionStorage.setItem("IdOficina", myArr.registro[0].idoficina);
+                     */
+                     alert("Registro del usuario " + usuario + " exitoso");
 
-                     //var myArr2 = JSON.stringify(JSON.parse(this.responseText));
-                      // var myArr2 = "{\"registro\":[{\"codusuario\":\"01\",\"nombre\":\"Robert\",\"apellidos\":\"Pariasca\",\"idempresa\":\"01\",\"cargoid\":\"01\",\"idoficina\":\"01\"}]}";
-                      
-                      // myArr2 = JSON.parse(myArr2);
-                     //var myarr2 = JSON.parse(JSON.stringify(JSON.parse(this.responseText)));
-            //sessionStorage.setItem("Nombre", nom);
-            //sessionStorage.setItem("Apellido", apel);
-                    //console.log(JSON.parse(myArr));
-                    
-                     //console.log(myArr);
-                    //alert(JSON.parse(myArr).registro[0].nombre);
-                    //alert(myArr.registro[0].nombre);
                     window.location.replace("principal.html");
-                    //alert(myArr2);
-                    //alert(myArr3);
-                    //alert("llego2");
-                    //var codusuarioa = myArr.registro;
-                    //alert(myArr.registro);
-                    //alert(myArr.registro(0));
-                    /*
-                    var nomusuario = myArr[1];
-                    var apellidos = myArr[3];
-                    var idempresa = myArr[4];
-                    var cargoid = myArr[5];
-                    var idoficina = myArr[6];
-                    
-            
-            alert(nomusuario);
-            alert(apellidos);
-            alert(idempresa);
-            alert(cargoid);
-            alert(idoficina);
-            */
+
                  }
             };
-            xhttp.open("POST", "http://localhost/ChuspitaApi/controller/sesion.validar.controller.php", true);
+            xhttp.open("POST", "http://localhost/ChuspitaApi/controller/seguridad.mantenimientousuario.controller.php", true);
             xhttp.setRequestHeader("Content-type", "application/json");
             xhttp.send(JSON.stringify(ItemJSON));
+            
             
             //alert("llego");
             //alert(xhttp.responseText);

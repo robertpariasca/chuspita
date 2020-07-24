@@ -1,56 +1,30 @@
 $(document).ready(() => {
 
+    var link = window.location.href;
+    var filename= link.substring(link.lastIndexOf('/')+1);
 
+    if(filename == "mantenimiento_seguridad.html"){
+        
+        
+    
     var xhttp = new XMLHttpRequest();
 
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-            //alert(this.responseText);
-            //var myArr3 =this.responseText;
             var respuesta = JSON.parse(this.responseText);
-            /*
-            alert(this.responseText);
-            alert(respuesta);
-            alert(respuesta.length);
-            */
-          
+         
            for(i = 0; i < respuesta.length; i++){
-          //alert(respuesta[i].idempresa)
-          //alert(respuesta[i].desempresa)
           
           var o = new Option(respuesta[i].desempresa, respuesta[i].idempresa);
           $(o).html(respuesta[i].desempresa);
           $("#segmanempresa").append(o);
 
         }
-            
-/*          
-            if (respuesta==''){
-                alert("Contraseña Incorrecta");
-                document.getElementById("examplePassword").innerHTML = "";
-                return;
-               }
-*/
-            //var myArr= JSON.parse(this.responseText);
-
         }
    };
-   xhttp.open("POST", "http://localhost/ChuspitaApi/controller/seguridad.cargaropciones.controller.php", true);
+   xhttp.open("POST", "http://localhost/ChuspitaApi/controller/seguridad.cargaropcionesempresa.controller.php", true);
    xhttp.setRequestHeader("Content-type", "application/json");
    xhttp.send();
-   //xhttp.send(JSON.stringify(ItemJSON));
-   //xhttp.send(respuesta.length);
-
-/*
-    $('#menu1 li').filter(function() {
-        return $(this).attr('value') === 'pruebaindex';
-    }).remove();
-*/
-/*
-    var o = new Option("Chuspita", "value");
-    $(o).html("Chuspita");
-    $("#segmanempresa").append(o);
-*/
 
 $('#segmanempresa').change(function() {
     $("#segmanempresa option[value='000']").remove();
@@ -130,6 +104,36 @@ $('#segmansede').change(function() {
     //var val = $("#segmanempresa option:selected").text();
     //alert(val);
 });
+
+    }else if(filename == "mantenimiento_seguridad_empresa.html"){
+
+        var ItemJSON={
+            "nombrecampo": "Tipo Doc Identidad",
+        };
+
+        var xhttp = new XMLHttpRequest();
+
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var respuesta = JSON.parse(this.responseText);
+         
+           for(i = 0; i < respuesta.length; i++){
+          
+          var o = new Option(respuesta[i].tipo_campo, respuesta[i].valor_campo);
+          $(o).html(respuesta[i].tipo_campo);
+          $("#segmanempdoc").append(o);
+
+        }
+        }
+   };
+   xhttp.open("POST", "http://localhost/ChuspitaApi/controller/seguridad.cargaropcionesmultitabla.controller.php", true);
+   xhttp.setRequestHeader("Content-type", "application/json");
+   xhttp.send(JSON.stringify(ItemJSON));
+
+
+
+    }
+
 
     });
 

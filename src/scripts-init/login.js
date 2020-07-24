@@ -1,19 +1,28 @@
-$(document).ready(() => {
+$(document).ready(() => 
+{
+
+  $.getJSON("https://api.ipify.org/?format=json", function(e) { 
+ 
+              ip = e.ip; 
+              sessionStorage.setItem("IpIngreso", ip);
+          }); 
+
     $("#login").click(function(){
     var email = $("#exampleEmail").val();
     var password = $("#examplePassword").val();
+    var ip;
     // Checking for blank fields.
     if( email =='' || password ==''){
     alert("Por favor, completar todos los campos");
     }else {
-
+ 
 
             var ItemJSON={
                 "email": email,
                 "clave": password
             };
                   
-
+            
             
             var xhttp = new XMLHttpRequest();
             //alert(JSON.stringify(ItemJSON));
@@ -47,6 +56,7 @@ $(document).ready(() => {
                      sessionStorage.setItem("IdEmpresa", myArr.registro[0].idempresa);
                      sessionStorage.setItem("IdCargo", myArr.registro[0].idcargo);
                      sessionStorage.setItem("IdOficina", myArr.registro[0].idoficina);
+                     
 
                      //var myArr2 = JSON.stringify(JSON.parse(this.responseText));
                       // var myArr2 = "{\"registro\":[{\"codusuario\":\"01\",\"nombre\":\"Robert\",\"apellidos\":\"Pariasca\",\"idempresa\":\"01\",\"cargoid\":\"01\",\"idoficina\":\"01\"}]}";

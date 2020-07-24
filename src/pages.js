@@ -12,13 +12,22 @@ const pages = [
         template: './src/DemoPages/pages/login-boxed.hbs'
     },
     {
-        output: './mantenimiengo_seguridad.html',
+        output: './mantenimiento_seguridad.html',
         content: {
             title: 'Mantenimiento',
-            description: 'Seguridad',
+            description: 'Seguridad Usuarios',
         },
         //template: './src/DemoPages/dashboards/analytics-dashboard.hbs'
         template: './src/DemoPages/dashboards/mantenimiento_seguridad.hbs'
+    },
+    {
+        output: './mantenimiento_seguridad_empresa.html',
+        content: {
+            title: 'Mantenimiento',
+            description: 'Seguridad Empresa',
+        },
+        //template: './src/DemoPages/dashboards/analytics-dashboard.hbs'
+        template: './src/DemoPages/dashboards/mantenimiento_seguridad_empresa.hbs'
     },
     {
         output: './principal.html',
