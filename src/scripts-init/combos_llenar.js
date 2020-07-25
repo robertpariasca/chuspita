@@ -3,7 +3,7 @@ $(document).ready(() => {
     var link = window.location.href;
     var filename= link.substring(link.lastIndexOf('/')+1);
 
-    if(filename == "mantenimiento_seguridad.html"){
+    if(filename == "mantenimiento_seguridad_usuario.html"){
         
         
     
@@ -132,7 +132,98 @@ $('#segmansede').change(function() {
 
 
 
-    }
+    }else if(filename == "mantenimiento_seguridad_oficina.html"){
+        
+        
+    
+        var xhttp = new XMLHttpRequest();
+    
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                var respuesta = JSON.parse(this.responseText);
+             
+               for(i = 0; i < respuesta.length; i++){
+              
+              var o = new Option(respuesta[i].desempresa, respuesta[i].idempresa);
+              $(o).html(respuesta[i].desempresa);
+              $("#segmanofiemp").append(o);
+    
+            }
+            }
+       };
+       xhttp.open("POST", "http://localhost/ChuspitaApi/controller/seguridad.cargaropcionesempresa.controller.php", true);
+       xhttp.setRequestHeader("Content-type", "application/json");
+       xhttp.send();
+    
+    $('#segmanofiemp').change(function() {
+        $("#segmanofiemp option[value='000']").remove();
+    });
+    
+        }else if(filename == "mantenimiento_seguridad_cargo.html"){
+        
+        
+    
+            var xhttp = new XMLHttpRequest();
+        
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    var respuesta = JSON.parse(this.responseText);
+                 
+                   for(i = 0; i < respuesta.length; i++){
+                  
+                  var o = new Option(respuesta[i].desempresa, respuesta[i].idempresa);
+                  $(o).html(respuesta[i].desempresa);
+                  $("#segmancaremp").append(o);
+        
+                }
+                }
+           };
+           xhttp.open("POST", "http://localhost/ChuspitaApi/controller/seguridad.cargaropcionesempresa.controller.php", true);
+           xhttp.setRequestHeader("Content-type", "application/json");
+           xhttp.send();
+        
+        $('#segmancaremp').change(function() {
+            $("#segmancaremp option[value='000']").remove();
+            $("#segmancarofi").empty();
+            var o = new Option("", "000");
+            $(o).html("");
+            $("#segmancarofi").append(o);
+
+            var ItemJSON={
+                "idempresa": $(this).children("option:selected").val()
+            };
+            //alert($(this).children("option:selected").val());
+            var xhttp = new XMLHttpRequest();
+        
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+        
+                    var respuesta = JSON.parse(this.responseText);
+                    //alert(respuesta);
+                    //alert(this.responseText);
+                   //$("#segmansede").empty();
+                    for(i = 0; i < respuesta.length; i++){
+        
+                    var o = new Option(respuesta[i].desoficina, respuesta[i].idoficina);
+                  $(o).html(respuesta[i].desoficina);
+                  $("#segmancarofi").append(o);
+        
+                }
+        
+                }
+           };
+           xhttp.open("POST", "http://localhost/ChuspitaApi/controller/seguridad.cargaropcionesoficina.controller.php", true);
+           xhttp.setRequestHeader("Content-type", "application/json");
+           xhttp.send(JSON.stringify(ItemJSON));
+            //var val = $("#segmanempresa option:selected").text();
+            //alert(val);
+        });
+        
+        $('#segmancarofi').change(function() {
+            $("#segmancarofi option[value='000']").remove();
+        });
+        
+            }
 
 
     });

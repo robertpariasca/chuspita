@@ -12,13 +12,13 @@ const pages = [
         template: './src/DemoPages/pages/login-boxed.hbs'
     },
     {
-        output: './mantenimiento_seguridad.html',
+        output: './mantenimiento_seguridad_usuario.html',
         content: {
             title: 'Mantenimiento',
             description: 'Seguridad Usuarios',
         },
         //template: './src/DemoPages/dashboards/analytics-dashboard.hbs'
-        template: './src/DemoPages/dashboards/mantenimiento_seguridad.hbs'
+        template: './src/DemoPages/dashboards/mantenimiento_seguridad_usuario.hbs'
     },
     {
         output: './mantenimiento_seguridad_empresa.html',
@@ -30,10 +30,28 @@ const pages = [
         template: './src/DemoPages/dashboards/mantenimiento_seguridad_empresa.hbs'
     },
     {
+        output: './mantenimiento_seguridad_oficina.html',
+        content: {
+            title: 'Mantenimiento',
+            description: 'Seguridad Oficina',
+        },
+        //template: './src/DemoPages/dashboards/analytics-dashboard.hbs'
+        template: './src/DemoPages/dashboards/mantenimiento_seguridad_oficina.hbs'
+    },
+    {
+        output: './mantenimiento_seguridad_cargo.html',
+        content: {
+            title: 'Mantenimiento',
+            description: 'Seguridad Cargo',
+        },
+        //template: './src/DemoPages/dashboards/analytics-dashboard.hbs'
+        template: './src/DemoPages/dashboards/mantenimiento_seguridad_cargo.hbs'
+    },
+    {
         output: './principal.html',
         content: {
-            title: 'Principal',
-            description: 'This is an example dashboard created using build-in elements and components.',
+            title: 'Pantalla Principal',
+            description: 'Pantalla Resumen',
         },
         template: './src/DemoPages/dashboards/principal.hbs'
     },
