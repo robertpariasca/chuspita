@@ -48,6 +48,42 @@ const pages = [
         template: './src/DemoPages/dashboards/mantenimiento_seguridad_cargo.hbs'
     },
     {
+        output: './mantenimiento_seguridad_modulo.html',
+        content: {
+            title: 'Mantenimiento',
+            description: 'Seguridad Modulo',
+        },
+        //template: './src/DemoPages/dashboards/analytics-dashboard.hbs'
+        template: './src/DemoPages/dashboards/mantenimiento_seguridad_modulo.hbs'
+    },
+    {
+        output: './mantenimiento_seguridad_menu.html',
+        content: {
+            title: 'Mantenimiento',
+            description: 'Seguridad Menu',
+        },
+        //template: './src/DemoPages/dashboards/analytics-dashboard.hbs'
+        template: './src/DemoPages/dashboards/mantenimiento_seguridad_menu.hbs'
+    },
+    {
+        output: './mantenimiento_seguridad_menuitem.html',
+        content: {
+            title: 'Mantenimiento',
+            description: 'Seguridad Menu Items',
+        },
+        //template: './src/DemoPages/dashboards/analytics-dashboard.hbs'
+        template: './src/DemoPages/dashboards/mantenimiento_seguridad_menuitem.hbs'
+    },
+    {
+        output: './mantenimiento_seguridad_permisos.html',
+        content: {
+            title: 'Mantenimiento',
+            description: 'Seguridad Permisos',
+        },
+        //template: './src/DemoPages/dashboards/analytics-dashboard.hbs'
+        template: './src/DemoPages/dashboards/mantenimiento_seguridad_permisos.hbs'
+    },
+    {
         output: './principal.html',
         content: {
             title: 'Pantalla Principal',

@@ -14,64 +14,59 @@
                         </div>
                                             <div class="col-md-9">
                                                 <div class="main-card mb-3 card">
-                                                    <div class="card-body"><h5 class="card-title">Registro de Usuario</h5>
-                                                        <form class="" method="post" id="formsegmanusuario">
-                                                            <div class="position-relative form-group"><label
-                                                                    for="segmanusuario" class="">Usuario</label><input
-                                                                    name="segmanusuario" id="segmanusuario"
-                                                                    placeholder="Ingrese Usuario..." type="text"
-                                                                    class="form-control" style="text-transform: lowercase"></div>
-                                                            <div class="position-relative form-group"><label
-                                                                    for="segmanpassword"
-                                                                    class="">Contraseña</label><input name="segmanpassword"
-                                                                                                    id="segmanpassword"
-                                                                                                    placeholder="Ingrese Contraseña..."
-                                                                                                    type="password"
-                                                                                                    class="form-control">
-                                                            </div>
-                                                            <div class="position-relative form-group"><label
-                                                                    for="segmannombre" class="">Nombre</label><input
-                                                                    name="segmannombre" id="segmannombre"
-                                                                    placeholder="Ingrese Nombre..." type="text"
-                                                                    class="form-control"></div>
-                                                            <div class="position-relative form-group"><label
-                                                                    for="segmanapellidos" class="">Apellidos</label><input
-                                                                    name="segmanapellidos" id="segmanapellidos"
-                                                                    placeholder="Ingrese Apellidos..." type="text"
-                                                                    class="form-control"></div>
+                                                    <div class="card-body"><h5 class="card-title">Registro de Permisos</h5>
+                                                        <form class="" method="post" id="formsegmanpermisos">
+                                                                    <div class="position-relative form-group"><label
+                                                                    for="segmanperemp" class="">Empresa</label><select
+                                                                    name="select" id="segmanperemp"
+                                                                    class="form-control">
+                                                                    <option value="000"> </option>
+                                                            </select></div>
+                                                                <div class="position-relative form-group"><label
+                                                                    for="segmanpersed" class="">Sede</label><select
+                                                                    name="select" id="segmanpersed"
+                                                                    class="form-control">
+                                                                    <option value="000"> </option>
+                                                            </select></div>
+                                                                <div class="position-relative form-group"><label
+                                                                    for="segmanpercar" class="">Cargo</label><select
+                                                                    name="select" id="segmanpercar"
+                                                                    class="form-control">
+                                                                    <option value="000"> </option>
+                                                            </select></div>
                                                             <div class="form-row">
                                                                 <div class="col-md-4">
                                                                     <div class="position-relative form-group"><label
-                                                                    for="segmanempresa" class="">Empresa</label><select
-                                                                    name="select" id="segmanempresa"
+                                                                    for="segmanpermod" class="">Modulo</label><select
+                                                                    name="select" id="segmanpermod"
                                                                     class="form-control">
                                                                     <option value="000"> </option>
                                                             </select></div>
                                                                 </div>                                                                
                                                             <div class="col-md-4">
                                                                 <div class="position-relative form-group"><label
-                                                                    for="segmansede" class="">Sede</label><select
-                                                                    name="select" id="segmansede"
+                                                                    for="segmanpermen" class="">Menu</label><select
+                                                                    name="select" id="segmanpermen"
                                                                     class="form-control">
                                                                     <option value="000"> </option>
                                                             </select></div>
                                                             </div>
                                                             <div class="col-md-4">
                                                                 <div class="position-relative form-group"><label
-                                                                    for="segmancargo" class="">Cargo</label><select
-                                                                    name="select" id="segmancargo"
+                                                                    for="segmanperite" class="">Menuitems</label><select
+                                                                    name="select" id="segmanperite"
                                                                     class="form-control">
                                                                     <option value="000"> </option>
                                                             </select></div>
                                                             </div>                                                            
                                                             </div>   
                                                             <div class="position-relative form-group">
-                                                                <button class="mt-1 btn btn-primary" type="button" name="agregarcargo" id="agregarcargo">Agregar</button>
+                                                                <button class="mt-1 btn btn-primary" type="button" name="agregarcargoper" id="agregarcargoper">Agregar</button>
                                                             </div>
                                             <div class="main-card mb-3 card">
                                                 <div class="card-body"><h5 class="card-title">Cargos Asignados</h5>
                                                     <div class="table-responsive">
-                                                        <table id="segmanusutbl" class="mb-0 table">
+                                                        <table id="segmanpertbl" class="mb-0 table">
                                                             <thead>
                                                             <tr>
                                                                 <th>#</th>
@@ -91,7 +86,7 @@
                                                 </div>
                                             </div>
                                                              <button class="mb-2 mr-2 btn-icon btn-shadow btn-outline-2x btn btn-outline-success" name='agregarUsuario' id='agregarUsuario'>
-                                                            <i class="lnr-user btn-icon-wrapper"> </i>Agregar Usuario
+                                                            <i class="lnr-user btn-icon-wrapper"> </i>Agregar Permiso
                                                         </button>
                                                         </form>
                                                     </div>

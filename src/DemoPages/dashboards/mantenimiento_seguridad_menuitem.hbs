@@ -1,0 +1,70 @@
+{{#> base }}
+    <div class="app-main">
+        {{> AppSidebar/menubar dash-analytics=this }}
+        <div class="app-main__outer">
+            <div class="app-main__inner">
+                {{> AppHeader/header }}
+                <div class="app-inner-layout app-inner-layout-page">
+                    
+                    <div class="app-inner-layout__wrapper">
+                        <div class="app-inner-layout__sidebar">
+                            <div class="app-layout__sidebar-inner dropdown-menu-rounded">
+                                {{> AppMain/page-menu dash-analytics=this}}
+                            </div>
+                        </div>
+                                            <div class="col-md-6">
+                                                <div class="main-card mb-3 card">
+                                                    <div class="card-body"><h5 class="card-title">Registro de Menu</h5>
+                                                        <form class="" method="post" id="formsegmanmenuitem">
+                                                            <div class="position-relative form-group"><label
+                                                                    for="segmanitemod" class="">Modulo</label><select
+                                                                    name="select" id="segmanitemod"
+                                                                    class="form-control">
+                                                                    <option value="000"> </option>
+                                                            </select></div>
+                                                            <div class="position-relative form-group"><label
+                                                                    for="segmanitemen" class="">Menu</label><select
+                                                                    name="select" id="segmanitemen"
+                                                                    class="form-control">
+                                                                    <option value="000"> </option>
+                                                            </select></div>
+                                                            <div class="position-relative form-group"><label
+                                                                    for="segmanitedes" class="">Descripción Item</label><input
+                                                                    name="segmanitedes" id="segmanitedes"
+                                                                    placeholder="Ingrese Nombre Menu Item..." type="text"
+                                                                    class="form-control"></div>
+                                                            <div class="position-relative form-group"><label
+                                                                    for="segmanitetip" class="">Tipo actividad</label>
+                                                                     <div class="custom-checkbox custom-control"><input
+                                                                        type="checkbox" id="segmainitetip1"
+                                                                        class="custom-control-input"><label
+                                                                        class="custom-control-label"
+                                                                        for="segmainitetip1">Ingresar</label></div>
+                                                                <div class="custom-checkbox custom-control"><input
+                                                                        type="checkbox" id="segmainitetip2"
+                                                                        class="custom-control-input"><label
+                                                                        class="custom-control-label"
+                                                                        for="segmainitetip2">Modificar</label></div>
+                                                                <div class="custom-checkbox custom-control"><input
+                                                                        type="checkbox" id="segmainitetip3"
+                                                                        class="custom-control-input"><label
+                                                                        class="custom-control-label"
+                                                                        for="segmainitetip3">Eliminar</label></div>
+                                                                <div class="custom-checkbox custom-control"><input
+                                                                        type="checkbox" id="segmainitetip4"
+                                                                        class="custom-control-input"><label
+                                                                        class="custom-control-label"
+                                                                        for="segmainitetip4">Listar</label></div>
+                                                                    </div>
+                                                            <button class="mt-1 btn btn-primary" name='agregarItem' id='agregarItem'>Agregar</button>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                    </div>
+                </div>
+            </div>
+            <!--{{> AppFooter/footer }}-->
+        </div>
+    </div>
+{{/ base }}

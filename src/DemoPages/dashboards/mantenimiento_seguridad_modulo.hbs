@@ -1,0 +1,36 @@
+{{#> base }}
+    <div class="app-main">
+        {{> AppSidebar/menubar dash-analytics=this }}
+        <div class="app-main__outer">
+            <div class="app-main__inner">
+                {{> AppHeader/header }}
+                <div class="app-inner-layout app-inner-layout-page">
+                    
+                    <div class="app-inner-layout__wrapper">
+                        <div class="app-inner-layout__sidebar">
+                            <div class="app-layout__sidebar-inner dropdown-menu-rounded">
+                                {{> AppMain/page-menu dash-analytics=this}}
+                            </div>
+                        </div>
+                                            <div class="col-md-6">
+                                                <div class="main-card mb-3 card">
+                                                    <div class="card-body"><h5 class="card-title">Registro de Modulos</h5>
+                                                        <form class="" method="post" id="formsegmanmodulo">
+                                                            <div class="position-relative form-group"><label
+                                                                    for="segmanmoddes" class="">Descripción Modulo</label><input
+                                                                    name="segmanmoddes" id="segmanmoddes"
+                                                                    placeholder="Ingrese Nombre Modulo..." type="text"
+                                                                    class="form-control"></div>
+
+                                                            <button class="mt-1 btn btn-primary" name='agregarModulo' id='agregarModulo'>Agregar</button>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                    </div>
+                </div>
+            </div>
+            <!--{{> AppFooter/footer }}-->
+        </div>
+    </div>
+{{/ base }}
