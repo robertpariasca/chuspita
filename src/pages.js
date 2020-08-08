@@ -84,6 +84,78 @@ const pages = [
         template: './src/DemoPages/dashboards/mantenimiento_seguridad_permisos.hbs'
     },
     {
+        output: './listado_seguridad_empresa.html',
+        content: {
+            title: 'Listado',
+            description: 'Seguridad Empresa',
+        },
+        //template: './src/DemoPages/dashboards/analytics-dashboard.hbs'
+        template: './src/DemoPages/dashboards/listado_seguridad_empresa.hbs'
+    },
+    {
+        output: './listado_seguridad_oficina.html',
+        content: {
+            title: 'Listado',
+            description: 'Seguridad Oficina',
+        },
+        //template: './src/DemoPages/dashboards/analytics-dashboard.hbs'
+        template: './src/DemoPages/dashboards/listado_seguridad_oficina.hbs'
+    },
+    {
+        output: './listado_seguridad_cargo.html',
+        content: {
+            title: 'Listado',
+            description: 'Seguridad Cargo',
+        },
+        //template: './src/DemoPages/dashboards/analytics-dashboard.hbs'
+        template: './src/DemoPages/dashboards/listado_seguridad_cargo.hbs'
+    },
+    {
+        output: './listado_seguridad_modulo.html',
+        content: {
+            title: 'Listado',
+            description: 'Seguridad Modulo',
+        },
+        //template: './src/DemoPages/dashboards/analytics-dashboard.hbs'
+        template: './src/DemoPages/dashboards/listado_seguridad_modulo.hbs'
+    },
+    {
+        output: './listado_seguridad_menu.html',
+        content: {
+            title: 'Listado',
+            description: 'Seguridad Menu',
+        },
+        //template: './src/DemoPages/dashboards/analytics-dashboard.hbs'
+        template: './src/DemoPages/dashboards/listado_seguridad_menu.hbs'
+    },
+    {
+        output: './listado_seguridad_menuitems.html',
+        content: {
+            title: 'Listado',
+            description: 'Seguridad Menu Items',
+        },
+        //template: './src/DemoPages/dashboards/analytics-dashboard.hbs'
+        template: './src/DemoPages/dashboards/listado_seguridad_menuitems.hbs'
+    },
+    {
+        output: './listado_seguridad_usuario.html',
+        content: {
+            title: 'Listado',
+            description: 'Seguridad Usuario',
+        },
+        //template: './src/DemoPages/dashboards/analytics-dashboard.hbs'
+        template: './src/DemoPages/dashboards/listado_seguridad_usuario.hbs'
+    },
+    {
+        output: './listado_seguridad_permisos.html',
+        content: {
+            title: 'Listado',
+            description: 'Seguridad Permiso',
+        },
+        //template: './src/DemoPages/dashboards/analytics-dashboard.hbs'
+        template: './src/DemoPages/dashboards/listado_seguridad_permisos.hbs'
+    },
+    {
         output: './principal.html',
         content: {
             title: 'Pantalla Principal',

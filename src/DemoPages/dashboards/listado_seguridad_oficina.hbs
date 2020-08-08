@@ -1,0 +1,52 @@
+{{#> base }}
+    <div class="app-main">
+        {{> AppSidebar/menubar dash-analytics=this }}
+        <div class="app-main__outer">
+            <div class="app-main__inner">
+                {{> AppHeader/header }}
+                <div class="app-inner-layout app-inner-layout-page">
+                    
+                    <div class="app-inner-layout__wrapper">
+                        <div class="app-inner-layout__sidebar">
+                            <div class="app-layout__sidebar-inner dropdown-menu-rounded">
+                                {{> AppMain/page-menu dash-analytics=this}}
+                            </div>
+                        </div>
+                                            <div class="col-md-9">
+                                                <div class="main-card mb-3 card">
+                                                    <div class="card-body"><h5 class="card-title">Listado de Sedes</h5>
+                                                    <button class="mb-2 mr-2 btn-pill btn btn-primary" onclick="window.location.href='mantenimiento_seguridad_oficina.html';">Agregar</button>
+                                                    
+                                                        <form class="" method="post" id="formsegmanusuario">
+                                            <div class="main-card mb-3 card">
+                                                <!--<div class="card-body"><h5 class="card-title">Cargos Asignados</h5>-->
+                                                    <div class="table-responsive">
+                                                        <table id="seglisofic" class="mb-0 table">
+                                                            <thead>
+                                                            <tr>
+                                                                <th>#</th>
+                                                                <th style="display:none;">IdEmpresa</th>
+                                                                <th>Empresa</th>
+                                                                <th>IdOficina</th>
+                                                                <th>Descripcion</th>
+                                                                <th>Direccion</th>
+                                                                <th>Opciones</th>
+                                                            </tr>
+                                                            </thead>
+                                                            <tbody>                                                             
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                    </div>
+                </div>
+            </div>
+            <!--{{> AppFooter/footer }}-->
+        </div>
+    </div>
+{{/ base }}

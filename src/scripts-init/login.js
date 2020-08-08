@@ -1,11 +1,12 @@
 $(document).ready(() => 
 {
-
+  
   $.getJSON("https://api.ipify.org/?format=json", function(e) { 
  
               ip = e.ip; 
               sessionStorage.setItem("IpIngreso", ip);
-          }); 
+          });
+
 
     $("#login").click(function(){
     var email = $("#exampleEmail").val();
@@ -16,14 +17,11 @@ $(document).ready(() =>
     alert("Por favor, completar todos los campos");
     }else {
  
-
             var ItemJSON={
                 "email": email,
                 "clave": password
             };
                   
-            
-            
             var xhttp = new XMLHttpRequest();
             //alert(JSON.stringify(ItemJSON));
             xhttp.onreadystatechange = function() {
@@ -51,11 +49,11 @@ $(document).ready(() =>
                     
                      var myArr= JSON.parse(this.responseText);
                      sessionStorage.setItem("Codigo", myArr.registro[0].codusuario);
-                     sessionStorage.setItem("Nombres", myArr.registro[0].nombre);
-                     sessionStorage.setItem("Apellidos", myArr.registro[0].apellidos);
-                     sessionStorage.setItem("IdEmpresa", myArr.registro[0].idempresa);
-                     sessionStorage.setItem("IdCargo", myArr.registro[0].idcargo);
-                     sessionStorage.setItem("IdOficina", myArr.registro[0].idoficina);
+                     sessionStorage.setItem("NombresLogin", myArr.registro[0].nombre);
+                     sessionStorage.setItem("ApellidosLogin", myArr.registro[0].apellidos);
+                     sessionStorage.setItem("IdEmpresaLogin", myArr.registro[0].idempresa);
+                     sessionStorage.setItem("IdCargoLogin", myArr.registro[0].idcargo);
+                     sessionStorage.setItem("IdOficinaLogin", myArr.registro[0].idoficina);
                      
 
                      //var myArr2 = JSON.stringify(JSON.parse(this.responseText));

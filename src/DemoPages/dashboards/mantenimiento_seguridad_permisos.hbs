@@ -59,9 +59,32 @@
                                                                     <option value="000"> </option>
                                                             </select></div>
                                                             </div>                                                            
-                                                            </div>   
+                                                            </div>
+                                                            <div class="position-relative form-group"><label
+                                                                    for="segmanitetip" class="">Tipo actividad</label>
+                                                                     <div class="custom-checkbox custom-control"><input
+                                                                        type="checkbox" id="segmanpertip1"
+                                                                        class="custom-control-input"><label
+                                                                        class="custom-control-label"
+                                                                        for="segmanpertip1">Ingresar</label></div>
+                                                                <div class="custom-checkbox custom-control"><input
+                                                                        type="checkbox" id="segmanpertip2"
+                                                                        class="custom-control-input"><label
+                                                                        class="custom-control-label"
+                                                                        for="segmanpertip2">Modificar</label></div>
+                                                                <div class="custom-checkbox custom-control"><input
+                                                                        type="checkbox" id="segmanpertip3"
+                                                                        class="custom-control-input"><label
+                                                                        class="custom-control-label"
+                                                                        for="segmanpertip3">Eliminar</label></div>
+                                                                <div class="custom-checkbox custom-control"><input
+                                                                        type="checkbox" id="segmanpertip4"
+                                                                        class="custom-control-input"><label
+                                                                        class="custom-control-label"
+                                                                        for="segmanpertip4">Listar</label></div>
+                                                                    </div>   
                                                             <div class="position-relative form-group">
-                                                                <button class="mt-1 btn btn-primary" type="button" name="agregarcargoper" id="agregarcargoper">Agregar</button>
+                                                                <button class="mt-1 btn btn-primary" type="button" name="agregarcargoper" id="agregarcargoper">Cargar</button>
                                                             </div>
                                             <div class="main-card mb-3 card">
                                                 <div class="card-body"><h5 class="card-title">Cargos Asignados</h5>
@@ -70,12 +93,13 @@
                                                             <thead>
                                                             <tr>
                                                                 <th>#</th>
-                                                                <th style="display:none;">CodEmpresa</th>
-                                                                <th>Empresa</th>
-                                                                <th style="display:none;">CodSede</th>
-                                                                <th>Sede</th>
-                                                                <th style="display:none;">CodCargo</th>
-                                                                <th>Cargo</th>
+                                                                <th style="display:none;">CodModulo</th>
+                                                                <th>Modulo</th>
+                                                                <th style="display:none;">CodMenu</th>
+                                                                <th>Menu</th>
+                                                                <th style="display:none;">CodMenuItem</th>
+                                                                <th>Menu Item</th>
+                                                                <th>Actividad</th>
                                                                 <th>Opciones</th>
                                                             </tr>
                                                             </thead>
@@ -85,9 +109,9 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                                             <button class="mb-2 mr-2 btn-icon btn-shadow btn-outline-2x btn btn-outline-success" name='agregarUsuario' id='agregarUsuario'>
-                                                            <i class="lnr-user btn-icon-wrapper"> </i>Agregar Permiso
-                                                        </button>
+                                            <div id="btnform">
+                                                                        <button class="mb-2 mr-2 btn-icon btn-shadow btn-outline-2x btn btn-outline-success" name='agregarPermiso' id='agregarPermiso'>Agregar</button>
+                                                                    </div>
                                                         </form>
                                                     </div>
                                                 </div>

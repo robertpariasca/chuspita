@@ -5,7 +5,7 @@ $(document).ready(() => {
 
     if(filename == "mantenimiento_seguridad_usuario.html"){
         
-        
+        sessionStorage.getItem("Codigo");
     
     var xhttp = new XMLHttpRequest();
 
@@ -129,8 +129,6 @@ $('#segmansede').change(function() {
    xhttp.open("POST", "http://localhost/ChuspitaApi/controller/seguridad.cargaropcionesmultitabla.controller.php", true);
    xhttp.setRequestHeader("Content-type", "application/json");
    xhttp.send(JSON.stringify(ItemJSON));
-
-
 
     }else if(filename == "mantenimiento_seguridad_oficina.html"){
         
