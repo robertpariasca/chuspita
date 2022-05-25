@@ -60,7 +60,7 @@
     "block-ui": "^2.70.1",
     "bootstrap": "^4.3.1",
     "bootstrap-multiselect": "0.9.13",
-    "bootstrap-table": "^1.14.2",
+    "bootstrap-table": "^1.20.2",
     "bootstrap-tour": "^0.12.0",
     "bootstrap4-toggle": "^3.4.0",
     "chart.js": "^2.8.0",
